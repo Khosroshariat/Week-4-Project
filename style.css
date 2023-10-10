@@ -1,0 +1,247 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#landing {
+    background-color: rgb(217, 217, 252);
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    background-color: rgb(217, 217, 252);
+}
+
+.container {
+    padding: 24px 0;
+}
+
+.row {
+    margin: 0 32px;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.orange {
+    color: rgb(239, 183, 41);
+}
+
+.btn {
+    cursor: pointer;
+}
+
+/* 
+NAV
+*/
+
+.nav__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav__img {
+    width: 100%;
+    max-width: 200px;
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;    
+}
+
+.nav__lists:not(:last-child) {
+    padding-right: 40px;
+}
+
+.nav__list {
+    position: relative;
+}
+
+.nav__list:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    right: 0;
+    bottom: -4px;
+    background-color: black;
+    transition: all 500ms ease;
+    
+}
+
+.nav__list:hover:after{
+    width: 100%;
+    left: 0;
+}
+
+.nav__contact {
+    background-color: rgb(240, 187, 51);
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 400ms ease;
+}
+
+.nav__contact:hover {
+    background-color: blueviolet;
+    color: aquamarine;
+}
+
+/* 
+HEADER
+*/
+
+.header__wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+    
+}
+
+.haeder__title {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.haeder__sub-title {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.body__img {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 48px;
+}
+ /* 
+ SEARCH  
+ */
+
+.search__area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 48px 0;
+}
+
+.btn__img {
+    font-size: 24px;
+}
+
+.btn {
+    background-color: blueviolet;
+    padding: 8px 56px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 8px;
+    transition: all 400ms ease;
+}
+
+.btn:hover {
+    background-color: rgb(237, 68, 158);
+}
+
+input {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+
+/* 
+FILTER SELECTOR 
+*/
+
+.filter__selector {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+#filter {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 8px;
+    font-size: 24px;
+    color: rgb(12, 12, 12);
+    background-color: rgb(240, 187, 51);
+    font-weight: 500;
+    border-radius: 20px;
+    border: 2px solid gray;
+}
+
+/* 
+MOVIES 
+*/
+
+.movie__img {
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: not-allowed;
+    transition: all 400ms ease;
+    
+}
+
+.movie__img:hover {
+    scale: 1.03;
+}
+
+.movie__details {
+    margin-top: 6px;
+    padding: 0 8px;    
+}
+
+.movie__detail {
+    width: 100%;
+    max-width: 300px;
+}
+
+.movies_lists {
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 3);
+}
+
+.movie__loading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 48px;
+}
