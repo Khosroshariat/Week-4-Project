@@ -212,6 +212,8 @@ MOVIES
     border-radius: 10px;
     overflow: hidden;
     cursor: not-allowed;
+    width: 100%;
+    max-width: 300px;
     transition: all 400ms ease;
     
 }
@@ -244,4 +246,40 @@ MOVIES
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 48px;
+}
+
+/* 
+FOOTER 
+*/
+footer {
+    background-color: rgb(51, 38, 68);
+}
+.footer__img {
+    width: 100%;
+    max-width: 150px;
+    filter: invert();
+}
+
+.img__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.footer__list{
+    color: white;
+    padding: 0 16px;
+    font-weight: 700;
+}
+
+.footer__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__para {
+    color: white;
+    text-align: center;
+    padding: 24px 0;
 }
