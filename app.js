@@ -6,13 +6,13 @@ async function main(filter){
     
     const data = await fetch(url)
     const movieData = await data.json()
-    const movieArray = movieData.Search.slice(0,6)
+    const movieArray = movieData.Search.slice(0, 6)
     
     if(filter === 'NEW_TO_OLD') {
-        const filterMoviess = movieArray.sort((a, b) => b.Year - a.Year)
+         movieArray.sort((a, b) => b.Year - a.Year)
     }
     if(filter === 'OLD_TO_NEW') {
-        const filterMoviess = movieArray.sort((a, b) => a.Year - b.Year)
+         movieArray.sort((a, b) => a.Year - b.Year)
     }
 
     movieListEl.innerHTML = movieArray.map((user) => getMovies(user)).join("")
@@ -39,20 +39,12 @@ function getMovies(user) {
 }
 
 async function search(event){
-    const title = event.target.value
+    event.preventDefault()
+    const title = document.querySelector('.search__input').value
     const data = await fetch(`https://www.omdbapi.com/?apikey=4d3b95cb&s=${title || ""}`)
     const movieData = await data.json()
-    const movieArray = movieData.Search.slice(0,6)
-
-    if(filter === 'NEW_TO_OLD') {
-        const filterMoviess = movieArray.sort((a, b) => b.Year - a.Year)
-    }
-    if(filter === 'OLD_TO_NEW') {
-        const filterMoviess = movieArray.sort((a, b) => a.Year - b.Year)
-    }
-
+    const movieArray = movieData.Search.slice(0, 6)
     movieListEl.innerHTML = movieArray.map((user) => getMovies(user)).join("")
-
 }
 
 
