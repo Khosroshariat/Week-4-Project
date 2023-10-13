@@ -2,7 +2,7 @@
 const movieListEl = document.querySelector('.movie__link')
 
 async function search(filter){
-
+    filter.preventDefault()
     const title = document.querySelector('.search__input').value
     const data = await fetch(`https://www.omdbapi.com/?apikey=4d3b95cb&s=${title || ""}`)
     const movieData = await data.json()
