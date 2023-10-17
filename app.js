@@ -2,7 +2,7 @@
 const movieListEl = document.querySelector('.movie__link')
 
 async function search(filter){
-    filter.preventDefault()
+    event.preventDefault()
     const title = document.querySelector('.search__input').value
     const data = await fetch(`https://www.omdbapi.com/?apikey=4d3b95cb&s=${title || ""}`)
     const movieData = await data.json()
@@ -31,7 +31,7 @@ function getMovies(user) {
     return `<div class="movies_lists">               
     <div class="movie__detail">
     <img class="movie__img" src="${user.Poster}" alt="">
-    <h4 class="movie__details"> ${user.Title} </h4>
+    <h4 class="movie__details movie__title"> ${user.Title} </h4>
     <h5 class="movie__details">Year: <span> ${user.Year} </span></h5>
     <h5 class="movie__details">Type: <span> ${user.Type} </span></h5>
     </div>

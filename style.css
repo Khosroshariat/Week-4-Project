@@ -357,12 +357,46 @@ MEDIA RESPONSIVE
      .btn {
         margin-top: 24px;
         width: 100%;
-        max-width: 400px;
+        max-width: 200px;
+     }
+
+     .search__input {
+        max-width: 300px;
      }
 
      input {
         font-size: 24px;
      }
+
+     .haeder__title {
+        font-size: 32px;
+     }
+
+     .haeder__sub-title {
+        font-size: 16px;
+     }
+
+     .nav__img {
+        max-width: 150px;
+     }
+
+     .body__img{
+        max-width: 300px;
+     }
+     .movie__title {
+        font-size: 12px;
+     }
+}
+
+@media (max-width: 510px) {
+    .haeder__title {
+        font-size: 24px;
+     }
+
+     .movie__detail {
+        font-size: 12px;
+     }
+
 }
 
 @media (max-width: 450px) {
@@ -376,4 +410,6 @@ MEDIA RESPONSIVE
     .footer__lists {
         padding: 16px 0;
     }
+
+
 }
