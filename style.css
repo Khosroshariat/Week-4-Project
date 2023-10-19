@@ -340,6 +340,16 @@ MEDIA RESPONSIVE
 */
 
 @media (max-width: 680px) {
+
+    .movie__link {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .movies_lists {
+        width: 100%;
+    }
+
      .nav__links {
         display: none;
      }
@@ -384,17 +394,14 @@ MEDIA RESPONSIVE
         max-width: 300px;
      }
      .movie__title {
-        font-size: 12px;
+        font-size: 16px;
      }
+
 }
 
 @media (max-width: 510px) {
     .haeder__title {
         font-size: 24px;
-     }
-
-     .movie__detail {
-        font-size: 12px;
      }
 
 }
